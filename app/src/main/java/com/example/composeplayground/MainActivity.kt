@@ -27,7 +27,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
 //            loadImageCard()
-            
+
+
             Column(Modifier.fillMaxSize()) {
                 val color = remember {
                     mutableStateOf(Color.Yellow)
