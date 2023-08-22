@@ -26,44 +26,8 @@ class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-//            loadImageCard()
-
-
-            Column(Modifier.fillMaxSize()) {
-                val color = remember {
-                    mutableStateOf(Color.Yellow)
-                }
-                ColorBox(
-                    Modifier.weight(1f).fillMaxSize()
-                ) {
-                    color.value = it
-                }
-                Box(modifier = Modifier
-                    .background(color.value)
-                    .weight(1f)
-                    .fillMaxSize()
-                )
-            }
 
         }
-    }
-}
-
-@Composable
-private fun loadImageCard() {
-    val painter = painterResource(id = R.drawable.glados1)
-    val description = "teste"
-    val title = "teste de card em compose"
-    Box(
-        modifier = Modifier
-            .fillMaxWidth(0.5f)
-            .padding(16.dp)
-    ) {
-        ImageCard(
-            painter = painter,
-            contentDescription = description,
-            title = title
-        )
     }
 }
 
