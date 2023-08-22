@@ -27,8 +27,6 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
 //            loadImageCard()
-
-
             Column(Modifier.fillMaxSize()) {
                 val color = remember {
                     mutableStateOf(Color.Yellow)
@@ -60,6 +58,7 @@ private fun loadImageCard() {
             .padding(16.dp)
     ) {
         ImageCard(
+
             painter = painter,
             contentDescription = description,
             title = title
